@@ -1,0 +1,411 @@
+html {
+    background:(white);
+}
+
+.zoomable{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    max-width: 70%;
+}
+
+.zoomed{
+    transform: scale(2);
+    z-index: 10;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0rem;
+    padding: 0;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 6rem;
+    color: #49515A;
+}
+
+/*Zvýraznění klíčových slov v odstavcích*/
+mark{
+    background-color: rgb(140, 160, 182);
+    color: white;
+    
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 3px;
+}
+
+#small ul{
+    list-style:square;
+    color: #49515A;
+}
+
+figure{
+    text-align: center;
+}
+
+figcaption{
+    color:#49515A;
+}
+
+#footer p{
+    margin-left:2rem;
+}
+
+#footer{
+    background-color:rgb(148, 148, 148);
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+h1 a{
+    text-decoration: none;
+    color: #9f9f9f;
+
+}
+
+h1 a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#header-text ul li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#header-text ul li{
+    text-align: left;
+    color: #9f9f9f;
+    list-style: none;
+}
+
+
+a{
+    color: #49515A;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;   
+}
+
+h2{     
+    color:#1c79cf;
+    padding-left: 1rem;
+}
+
+#footer h2{
+    color: #49515A;
+}
+
+h3{
+    margin: 2rem;
+    color: #024c91db;
+}
+
+#zkusenosti, #vzdelani, #uspechy, #zajmy {
+    scroll-margin-top: 100px; /*Posun, aby nadpis nepřekrývala nav( při odkazech na kapitoly)*/
+}
+
+nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav{
+    /*Nav zůstává na stránce*/
+    position: sticky;
+    top:0;
+    
+    display: block;
+    padding: 0.01rem; 
+    background: rgb(120, 120, 122);
+}
+
+nav ul{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr); 
+    list-style: none
+}
+
+nav ul li{
+    align-self: center;
+}
+
+/*Pozadí pokud by se nenačetl obrázek*/
+#header{
+    background: linear-gradient(to bottom, #e8e9ed, #7582BD);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+#text{
+    margin:3rem;
+}
+
+.oddelovac{
+    height: 3px;
+  background-color: rgb(61, 61, 61);
+  border: none;
+  width: 80%;
+  margin: 30px auto;
+}
+
+#obrazky{
+    align-content: center;
+}
+
+img{
+    width: 70%; 
+    height: auto;
+    padding: 2rem;
+}
+
+
+/*Layout pro telefony*/
+@media (max-width: 767px){
+    nav ul li a:nth-child(2){
+       display: none;
+       margin:0;
+       padding: 0;
+    }
+
+    nav ul li a .i{
+        display: block;
+    }
+
+    #header{
+        background-image: url('https://images.pexels.com/photos/30918484/pexels-photo-30918484/free-photo-of-silhouette-of-a-man-climbing-in-iceland.png');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 100vh; /*Zabere celou výšku okna*/
+    }
+
+    h1{
+        margin-top: 0;
+        color:#49515A;
+    }
+    #header-text ul li:nth-child(1) {
+        margin-top: 10px;
+        margin-left: 10px;
+        color:#49515A;
+
+    } 
+    #header-text ul li:nth-child(2) {
+        margin-top:20px;
+        margin-left: 20px;
+        color:#49515A;
+
+    
+    }
+    #header-text ul li:nth-child(3) {
+        margin-top:20px;
+        margin-left: 30px;
+        color:#49515A;
+
+    
+    }
+     /*Na stránce není tolik místa, proto skryté ikony*/
+    #text .fa-handshake, #text .fa-landmark, #text .fa-medal, #text .fa-sign-hanging{
+        display: none;
+    }
+
+    #footer{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+       
+    }
+
+    .zoomed{
+        width: 90%;
+        align-self: center;
+    }
+
+    p{
+        margin-left: 2rem;
+    }
+
+    #obrazky{
+        background: linear-gradient( white, rgb(198, 198, 198));
+    }
+}
+
+/*Přechodná velikost obrazovky*/
+@media (min-width: 768px) and (max-width: 992px){
+    nav ul li a{
+        margin:0;
+        padding: 0;
+     
+    }
+
+    nav ul{
+        display:grid;
+        grid-template-columns: repeat(5, 1fr); 
+    
+    }
+
+    #header{
+        /*Licence free obrázek jako pozadí*/
+        background-image: url('https://images.pexels.com/photos/30918484/pexels-photo-30918484/free-photo-of-silhouette-of-a-man-climbing-in-iceland.png');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 100vh; /*Zabere celou výšku okna*/
+    }
+
+    h1{
+        margin-top: 0;
+        color:#49515A;
+    }
+    
+    #header-text ul li:nth-child(1){
+        margin-top: 10px;
+        margin-left: 20px;
+        color:#49515A;
+
+    } 
+    #header-text ul li:nth-child(2){
+        margin-left:50px;
+        margin-top:20px;
+        color:#49515A;
+
+    
+    }
+    #header-text ul li:nth-child(3){
+        margin-left:100px;
+        margin-top:20px;
+        color:#49515A;
+
+    
+    }
+    
+    #obrazky{
+        background: linear-gradient( white, rgb(198, 198, 198));
+    }
+    .zoomed{
+        width: 90%;
+        align-self: center;
+    }
+
+    #footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        padding: 20px;
+
+    }
+      
+    #kontakt{
+        grid-column: 1;
+    }
+    #sidlo {
+        grid-column: 2; 
+    } 
+    #ico {
+        grid-column: 1; /*Zarovnani pod #kontakt*/
+        text-align: left; 
+    }
+
+    #footer #ico ul{
+        list-style: none;
+
+    }
+    
+}
+
+
+/*Layout pro velké obrazovky*/
+@media (min-width: 992px){
+    nav ul li a p{
+        margin:0;
+        padding: 0;
+     
+    }
+
+    nav ul{
+        display:grid;
+        grid-template-columns: repeat(5, 1fr); 
+    
+    
+    }
+    /*Nezobrazují se seznamy s výpisem odstavců(na stránce je dost místa na text)*/
+    #small{
+        display: none;
+    
+    }
+
+    #footer{
+        display: flex;
+        padding-bottom:1rem;
+       
+    }
+    #kontakt{
+        order:1;
+        flex:2;
+    }
+    #sidlo{
+        order:2;
+        flex:3;
+    }
+    #ico{
+        order:3;
+        flex:2;
+    }
+  
+    #TO{
+         display: flex;
+    }
+     
+    #text{
+         order:1;
+         flex: 2;
+    }
+
+    #obrazky{
+        order:2;
+        flex:1;
+    
+        display: grid;
+        grid-template-columns: repeat(1, 3fr); 
+        padding: 1rem;
+        margin-top: 3rem;
+        background: linear-gradient(white, rgb(198, 198, 198));
+    }
+
+    .zoomed{
+        width: 50%;
+    }
+    
+    #header{
+        /*Licence free obrázek jako pozadí*/
+        background-image: url('https://images.pexels.com/photos/30918484/pexels-photo-30918484/free-photo-of-silhouette-of-a-man-climbing-in-iceland.png');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 100vh; 
+    }
+    #header-text ul li:nth-child(1){
+        margin-left: 20px;
+    } 
+    #header-text ul li:nth-child(2){
+        margin-left:50px;
+        margin-top:50px;
+    
+    }
+    #header-text ul li:nth-child(3){
+        margin-left:100px;
+        margin-top:50px;
+    
+    }
+}
